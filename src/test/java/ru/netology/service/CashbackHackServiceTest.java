@@ -11,7 +11,7 @@ public class CashbackHackServiceTest {
     public void shouldServiceIfAmountBelowBoundary() {
 
         int actual = service.remain(900);
-        int expected = 100;
+        int expected = 200;
 
         assertEquals(actual, expected);
 
@@ -19,7 +19,7 @@ public class CashbackHackServiceTest {
     @Test
     public void shouldServiceIfAmountEqualBoundary() {
         int actual = service.remain(1000);
-        int expected = 1000;
+        int expected = 0;
 
         assertEquals(actual, expected);
     }
